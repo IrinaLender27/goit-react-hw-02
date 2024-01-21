@@ -1,16 +1,16 @@
-import { useState } from "react";
-
-export const Options = () => {
-  //   const [clicks, setClicks] = useState(initialValue);
-
-  //   const handleClick = () => {
-  //     setClicks(clicks + 1);
-  //   }
+export const Options = ({ onUpdate, isHidden, onReset }) => {
   return (
-    <>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
-    </>
+    <div>
+      <button onClick={() => onUpdate("good")} name="good">
+        Good
+      </button>
+      <button onClick={() => onUpdate("neutral")} name="neutral">
+        Neutral
+      </button>
+      <button onClick={() => onUpdate("bad")} name="bad">
+        Bad
+      </button>
+      {!isHidden && <button onClick={onReset}>Reset</button>}
+    </div>
   );
 };
