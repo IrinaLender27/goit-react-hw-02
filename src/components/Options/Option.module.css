@@ -1,0 +1,12 @@
+.option {
+  display: flex;
+  gap: 10px;
+}
+.optionButton {
+  display: block;
+  cursor: pointer;
+  background-color: #4d5ae5;
+}
+.optionButton:hover {
+  background-color: #404bbf;
+}

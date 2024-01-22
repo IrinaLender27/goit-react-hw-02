@@ -5,17 +5,7 @@ import { Options } from "./Options/Options";
 import { Feedback } from "./FeedBack/FeedBack";
 import { Notification } from "./Notification/Notification";
 
-// const getInitialClicks = () => {
-//   const savedFeedBack = window.localStorage.getItem("saved-feedback");
-//   return savedFeedBack !== null
-//     ? JSON.parse(savedFeedBack)
-//     : {
-//         good: 0,
-//         neutral: 0,
-//         bad: 0,
-//       };
-// };
-function App() {
+export const App = () => {
   const [feedBackType, setFeedBackType] = useState(() => {
     const savedFeedback = window.localStorage.getItem("saved-feedback");
     return savedFeedback === null
@@ -68,6 +58,6 @@ function App() {
       )}
     </>
   );
-}
+};
 
 export default App;
