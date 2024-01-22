@@ -5,7 +5,6 @@ export const Feedback = ({
   totalFeedback,
   positivFeedBack,
 }) => {
-  console.log(good);
   return (
     <div className={css.feedBack}>
       <p>Good:{good}</p>
